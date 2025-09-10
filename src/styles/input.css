@@ -9,10 +9,11 @@
     @font-face {
         font-family: 'Retro';
         font-weight: normal;
-        src: url('../../assets/font.otf') format('opentype');
+        src: url('/assets/font.otf') format('opentype');
     }
 
     * {
         font-family: 'Retro', sans-serif;
+        letter-spacing: 1px;
     }
 }

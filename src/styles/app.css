@@ -184,9 +184,6 @@
   .basis-1\/2 {
     flex-basis: calc(1/2 * 100%);
   }
-  .basis-full {
-    flex-basis: 100%;
-  }
   .items-center {
     align-items: center;
   }
@@ -206,9 +203,6 @@
   }
   .border-black {
     border-color: var(--color-black);
-  }
-  .bg-\[\#F4C188\] {
-    background-color: #F4C188;
   }
   .bg-body {
     background-color: var(--color-body);
@@ -234,10 +228,11 @@
   @font-face {
     font-family: 'Retro';
     font-weight: normal;
-    src: url('../../assets/font.otf') format('opentype');
+    src: url('/assets/font.otf') format('opentype');
   }
   * {
     font-family: 'Retro', sans-serif;
+    letter-spacing: 1px;
   }
 }
 @property --tw-border-style {
