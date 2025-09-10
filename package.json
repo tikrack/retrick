@@ -1,0 +1,26 @@
+{
+  "name": "retrick",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tailwind::watch": "npx @tailwindcss/cli -i ./src/styles/input.css -o ./src/styles/app.css --watch",
+    "tailwind::build": "npx @tailwindcss/cli -i ./src/styles/input.css -o ./src/styles/app.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tikrack/retrick.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/tikrack/retrick/issues"
+  },
+  "homepage": "https://github.com/tikrack/retrick#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.13",
+    "tailwindcss": "^4.1.13"
+  }
+}
