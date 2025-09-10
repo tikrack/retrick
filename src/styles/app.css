@@ -10,8 +10,11 @@
     --color-yellow-500: oklch(79.5% 0.184 86.047);
     --color-black: #000;
     --spacing: 0.25rem;
+    --font-weight-bold: 700;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-body: #F4C188;
+    --color-box: #FFDBC1;
   }
 }
 @layer base {
@@ -166,24 +169,8 @@
   .flex {
     display: flex;
   }
-  .table {
-    display: table;
-  }
-  .size-100 {
-    width: calc(var(--spacing) * 100);
-    height: calc(var(--spacing) * 100);
-  }
-  .h-4 {
-    height: calc(var(--spacing) * 4);
-  }
-  .h-8 {
-    height: calc(var(--spacing) * 8);
-  }
   .h-9 {
     height: calc(var(--spacing) * 9);
-  }
-  .h-10 {
-    height: calc(var(--spacing) * 10);
   }
   .h-25 {
     height: calc(var(--spacing) * 25);
@@ -191,20 +178,14 @@
   .h-dvh {
     height: 100dvh;
   }
-  .w-100 {
-    width: calc(var(--spacing) * 100);
-  }
-  .w-300 {
-    width: calc(var(--spacing) * 300);
-  }
   .w-full {
     width: 100%;
   }
-  .border-collapse {
-    border-collapse: collapse;
+  .basis-1\/2 {
+    flex-basis: calc(1/2 * 100%);
   }
-  .resize {
-    resize: both;
+  .basis-full {
+    flex-basis: 100%;
   }
   .items-center {
     align-items: center;
@@ -212,15 +193,8 @@
   .justify-between {
     justify-content: space-between;
   }
-  .justify-center {
-    justify-content: center;
-  }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
   }
   .border-2 {
     border-style: var(--tw-border-style);
@@ -233,24 +207,37 @@
   .border-black {
     border-color: var(--color-black);
   }
-  .border-b-black {
-    border-bottom-color: var(--color-black);
+  .bg-\[\#F4C188\] {
+    background-color: #F4C188;
   }
-  .bg-black {
-    background-color: var(--color-black);
+  .bg-body {
+    background-color: var(--color-body);
+  }
+  .bg-box {
+    background-color: var(--color-box);
   }
   .bg-yellow-500 {
     background-color: var(--color-yellow-500);
   }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
   }
-  .underline {
-    text-decoration-line: underline;
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
   }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
+}
+@layer base {
+  @font-face {
+    font-family: 'Retro';
+    font-weight: normal;
+    src: url('../../assets/font.otf') format('opentype');
+  }
+  * {
+    font-family: 'Retro', sans-serif;
   }
 }
 @property --tw-border-style {
@@ -258,16 +245,15 @@
   inherits: false;
   initial-value: solid;
 }
-@property --tw-outline-style {
+@property --tw-font-weight {
   syntax: "*";
   inherits: false;
-  initial-value: solid;
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
-      --tw-outline-style: solid;
+      --tw-font-weight: initial;
     }
   }
 }

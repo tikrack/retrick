@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+@theme {
+    --color-body: #F4C188;
+    --color-box: #FFDBC1;
+}
+
+@layer base {
+    @font-face {
+        font-family: 'Retro';
+        font-weight: normal;
+        src: url('../../assets/font.otf') format('opentype');
+    }
+
+    * {
+        font-family: 'Retro', sans-serif;
+    }
+}
