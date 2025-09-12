@@ -103,13 +103,6 @@ todoInput.addEventListener("input", () => {
     localStorage.setItem("todoInput", todoInput.value);
 });
 
-clearAllBtn.addEventListener("click", () => {
-    if (confirm("Delete all tasks?")) {
-        localStorage.removeItem("todos");
-        renderTodos();
-    }
-});
-
 function saveVisibility(state) {
     localStorage.setItem("todoVisible", state);
 }
