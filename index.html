@@ -6,16 +6,44 @@
     <link rel="stylesheet" href="/src/styles/app.css">
 </head>
 <body class="h-dvh bg-body p-4">
+<svg class="hidden">
+    <symbol id="close">
+        <g stroke-width="0"></g>
+        <g stroke-linecap="round" stroke-linejoin="round"></g>
+        <g>
+            <g stroke="none" stroke-width="2" fill="none" fill-rule="evenodd">
+                <g transform="translate(-419.000000, -240.000000)" fill="#000000">
+                    <g transform="translate(56.000000, 160.000000)">
+                        <polygon points="375.0183 90 384 98.554 382.48065 100 373.5 91.446 364.5183 100 363 98.554 371.98065 90 363 81.446 364.5183 80 373.5 88.554 382.48065 80 384 81.446"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </symbol>
+</svg>
+
+
 <div class="flex gap-4 w-full">
-    <div class="basis-1/2 border-2 border-black h-25 bg-box">
-        <div class="w-full h-9 bg-yellow-500 border-b-2 border-black px-2 flex justify-between items-center font-bold">
+    <div class="basis-1/2 border-2 border-black relative bg-box">
+        <div class="w-full h-9 absolute bg-yellow-500 border-b-2 border-black px-2 flex justify-between items-center text-[16px] font-bold">
             Google Search
-            <div>
-                <div></div>
-                <div></div>
-                <div></div>
+            <div class="flex gap-2">
+                <div class="size-5.5 cursor-pointer border-2 flex justify-center pb-1 items-end border-black">
+                    <div class="bg-black w-3 h-0.5"></div>
+                </div>
+                <div class="size-5.5 cursor-pointer border-2 flex justify-center items-center border-black">
+                    <div class="size-3 rounded-full border-2 border-black"></div>
+                </div>
+                <div class="size-5.5 relative cursor-pointer border-2 border-black flex justify-center items-center">
+                    <div class="absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 w-3 rotate-45 h-[2px] bg-black"></div>
+                    <div class="absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 w-3 rotate-135 h-[2px] bg-black"></div>
+                </div>
             </div>
         </div>
+        <form action="https://google.com/search" method="get" class="w-full h-full pt-12 pb-3 gap-2 px-2 flex flex-col justify-center items-center">
+            <input type="text" name="q" class="border-2 border-black focus-visible:outline-0 h-9 min-w-100 px-2 placeholder:text-gray-700" placeholder="I use arch btw?" required>
+            <button type="submit" class="font-bold border-2 border-black bg-button px-8 py-2 cursor-pointer active:opacity-50">Search</button>
+        </form>
     </div>
     <div class="basis-1/2 border-2 border-black h-25 bg-box">
         <div class="w-full h-9 bg-yellow-500 border-b-2 border-black px-2 flex justify-between items-center font-bold">

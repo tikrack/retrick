@@ -3,17 +3,32 @@
 @theme {
     --color-body: #F4C188;
     --color-box: #FFDBC1;
+    --color-button: #F3C28A;
+
+    --font-digit: "Digit";
+    --font-retro: "Retro";
 }
 
 @layer base {
     @font-face {
-        font-family: 'Retro';
+        font-family: 'Digit';
         font-weight: normal;
-        src: url('/assets/font.otf') format('opentype');
+        src: url('/assets/DS-DIGIT.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Retro';
+        src: url('/assets/Quicksand-Regular.ttf') format('truetype');
+        font-weight: 400;
+    }
+
+    @font-face {
+        font-family: 'Retro';
+        src: url('/assets/Quicksand-Bold.ttf') format('truetype');
+        font-weight: 700;
     }
 
     * {
         font-family: 'Retro', sans-serif;
-        letter-spacing: 1px;
     }
 }
