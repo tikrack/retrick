@@ -4,6 +4,7 @@
     --color-body: #F4C188;
     --color-box: #FFDBC1;
     --color-button: #F3C28A;
+    --color-bar-button: #F3C28A;
 
     --font-digit: "Digit";
     --font-retro: "Retro";
@@ -30,5 +31,6 @@
 
     * {
         font-family: 'Retro', sans-serif;
+        font-size: 16px;
     }
 }

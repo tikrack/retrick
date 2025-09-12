@@ -14,7 +14,8 @@
             <g stroke="none" stroke-width="2" fill="none" fill-rule="evenodd">
                 <g transform="translate(-419.000000, -240.000000)" fill="#000000">
                     <g transform="translate(56.000000, 160.000000)">
-                        <polygon points="375.0183 90 384 98.554 382.48065 100 373.5 91.446 364.5183 100 363 98.554 371.98065 90 363 81.446 364.5183 80 373.5 88.554 382.48065 80 384 81.446"></polygon>
+                        <polygon
+                                points="375.0183 90 384 98.554 382.48065 100 373.5 91.446 364.5183 100 363 98.554 371.98065 90 363 81.446 364.5183 80 373.5 88.554 382.48065 80 384 81.446"></polygon>
                     </g>
                 </g>
             </g>
@@ -23,36 +24,79 @@
 </svg>
 
 
-<div class="flex gap-4 w-full">
-    <div class="basis-1/2 border-2 border-black relative bg-box">
-        <div class="w-full h-9 absolute bg-yellow-500 border-b-2 border-black px-2 flex justify-between items-center text-[16px] font-bold">
+<div class="flex gap-4 w-full items-start">
+    <div class="basis-4/12 border-2 border-black relative bg-box">
+        <div class="w-full h-9 absolute bg-yellow-500 border-b-2 border-black px-2 flex justify-between items-center font-bold">
             Google Search
             <div class="flex gap-2">
-                <div class="size-5.5 cursor-pointer border-2 flex justify-center pb-1 items-end border-black">
+                <div class="size-5.5 cursor-pointer border-2 flex justify-center pb-1 items-end border-black bg-bar-button">
                     <div class="bg-black w-3 h-0.5"></div>
                 </div>
-                <div class="size-5.5 cursor-pointer border-2 flex justify-center items-center border-black">
+                <div class="size-5.5 cursor-pointer border-2 flex justify-center items-center border-black bg-bar-button">
                     <div class="size-3 rounded-full border-2 border-black"></div>
                 </div>
-                <div class="size-5.5 relative cursor-pointer border-2 border-black flex justify-center items-center">
+                <div class="size-5.5 relative cursor-pointer border-2 border-black flex justify-center items-center bg-bar-button">
                     <div class="absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 w-3 rotate-45 h-[2px] bg-black"></div>
                     <div class="absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 w-3 rotate-135 h-[2px] bg-black"></div>
                 </div>
             </div>
         </div>
-        <form action="https://google.com/search" method="get" class="w-full h-full pt-12 pb-3 gap-2 px-2 flex flex-col justify-center items-center">
-            <input type="text" name="q" class="border-2 border-black focus-visible:outline-0 h-9 min-w-100 px-2 placeholder:text-gray-700" placeholder="I use arch btw?" required>
-            <button type="submit" class="font-bold border-2 border-black bg-button px-8 py-2 cursor-pointer active:opacity-50">Search</button>
+        <form action="https://google.com/search" method="get"
+              class="w-full h-full pt-12 pb-3 gap-2 px-2 flex flex-col justify-center items-center">
+            <input type="text" name="q"
+                   class="border-2  border-black focus-visible:outline-0 h-9 min-w-100 px-2 placeholder:text-gray-700"
+                   placeholder="I use arch btw?" required>
+            <button type="submit"
+                    class="font-bold border-2 border-black bg-button px-8 py-2 cursor-pointer active:opacity-50">Search
+            </button>
         </form>
     </div>
-    <div class="basis-1/2 border-2 border-black h-25 bg-box">
-        <div class="w-full h-9 bg-yellow-500 border-b-2 border-black px-2 flex justify-between items-center font-bold">
-            Google Search
-            <div>
-                <div></div>
-                <div></div>
-                <div></div>
+    <div class="basis-4/12 border-2 border-black relative bg-box">
+        <div class="w-full h-9 absolute bg-yellow-500 border-b-2 border-black px-2 flex justify-between items-center font-bold">
+            Clock
+            <div class="flex gap-2">
+                <div class="size-5.5 cursor-pointer border-2 flex justify-center pb-1 items-end border-black bg-bar-button">
+                    <div class="bg-black w-3 h-0.5"></div>
+                </div>
+                <div class="size-5.5 cursor-pointer border-2 flex justify-center items-center border-black bg-bar-button">
+                    <div class="size-3 rounded-full border-2 border-black"></div>
+                </div>
+                <div class="size-5.5 relative cursor-pointer border-2 border-black flex justify-center items-center bg-bar-button">
+                    <div class="absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 w-3 rotate-45 h-[2px] bg-black"></div>
+                    <div class="absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 w-3 rotate-135 h-[2px] bg-black"></div>
+                </div>
             </div>
+        </div>
+
+        <div class="w-full h-full pt-12 pb-3 flex flex-col justify-center items-center gap-2 font-mono">
+            <div id="clock-time" class="text-4xl font-bold">00:00:00</div>
+            <div id="clock-date" class="text-base font-bold">Friday, 01 Jan 2025</div>
+        </div>
+    </div>
+    <div class="basis-4/12 relative bg-box" id="todoWidget">
+        <div class="w-full h-9 absolute bg-yellow-500 border-2 border-black px-2 flex justify-between items-center font-bold">
+            Todo List
+            <div class="flex gap-2">
+                <div id="toggleTodo"
+                     class="size-5.5 cursor-pointer border-2 flex justify-center items-center border-black bg-bar-button">
+                    −
+                </div>
+            </div>
+        </div>
+
+        <div id="todoContent"
+             class="w-full h-full pt-12 pb-3 border-b-2 border-x-2 border-black flex flex-col justify-start items-center gap-2 font-mono">
+            <form id="todoForm" class="flex gap-2 w-11/12">
+                <textarea id="todoInput" placeholder="New task..." rows="2"
+                          class="flex-1 border-2 border-black px-2 py-1 resize-y focus-visible:outline-0 min-w-100 placeholder:text-gray-700"></textarea>
+                <button type="submit"
+                        class="border-2 border-black bg-button px-3 font-bold">Add
+                </button>
+            </form>
+
+            <button id="clearAll" class="border-2 border-black bg-button px-3 font-bold mt-1">Clear All</button>
+
+            <ul id="todoList" class="w-11/12 flex flex-col gap-2 mt-2 max-h-60 overflow-y-auto"></ul>
         </div>
     </div>
 </div>
